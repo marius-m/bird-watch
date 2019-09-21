@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets</title>
+</head>
+<body>
+<h1>User @u3x messages</h1>
+<td>
+    <table>
+        <tbody>
+        <tr th:each="tweet, rowStat : ${tweets}">
+            <td th:text="${rowStat.count}">1</td>
+            <td th:text="${tweet.user}"></td>
+            <td th:text="${tweet.text}"></td>
+        </tr>
+        </tbody>
+    </table>
+</td></body>
+</html>
